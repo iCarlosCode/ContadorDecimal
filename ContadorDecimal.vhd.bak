@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity ContadorDecimal is
+	port(
+		reset: in std_logic;
+		clk: in std_logic;
+		s_decimal: out std_logic (6 downto 0);
+		s_bcd: out std_logic (7 downto 0);
+	);
+end ContadorDecimal;
+
+architecture A of ContadorDecimal is
+	process(clk, reset)
+	begin
+		if (reset = '1') then
+			s_decimal <= '0000000'
+		elsif falling_edge(clk) then
+			s_decimal <= s_decimal + 1;
+		end if;
+	
+	end process;
+end A;
