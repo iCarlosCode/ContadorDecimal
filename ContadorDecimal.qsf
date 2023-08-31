@@ -71,8 +71,6 @@ set_location_assignment PIN_L25 -to s_bcd7s_unidade[4]
 set_location_assignment PIN_J22 -to s_bcd7s_unidade[5]
 set_location_assignment PIN_H22 -to s_bcd7s_unidade[6]
 set_location_assignment PIN_Y23 -to reset
-set_location_assignment PIN_E21 -to s_reset
-set_location_assignment PIN_Y2 -to clk
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -81,4 +79,20 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
 set_global_assignment -name VHDL_FILE CLOCK1HZ.vhd
 set_location_assignment PIN_Y24 -to sentido_contagem
+set_location_assignment PIN_E21 -to s_clock
+set_location_assignment PIN_Y2 -to clock_50mhz
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform5.vwf
+set_location_assignment PIN_AA25 -to s_bcd7s_infos[0]
+set_location_assignment PIN_AA26 -to s_bcd7s_infos[1]
+set_location_assignment PIN_Y25 -to s_bcd7s_infos[2]
+set_location_assignment PIN_W26 -to s_bcd7s_infos[3]
+set_location_assignment PIN_Y26 -to s_bcd7s_infos[4]
+set_location_assignment PIN_W27 -to s_bcd7s_infos[5]
+set_location_assignment PIN_W28 -to s_bcd7s_infos[6]
+set_location_assignment PIN_V25 -to s_dezena[5]
+set_location_assignment PIN_L27 -to s_unidade[2]
+set_location_assignment PIN_U27 -to s_dezena[4]
+set_location_assignment PIN_J23 -to s_unidade[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

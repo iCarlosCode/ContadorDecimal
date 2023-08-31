@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "s_reset",
-					"strict" : false
-				},
-				{
 					"name" : "s_decimal[0]",
 					"strict" : false
 				},
@@ -80,6 +76,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "s_clock",
+					"strict" : false
+				},
+				{
 					"name" : "s_bcd7s_dezena[6]",
 					"strict" : false
 				},
@@ -105,6 +105,30 @@
 				},
 				{
 					"name" : "s_bcd7s_dezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "s_bcd7s_infos[0]",
 					"strict" : false
 				},
 				{
@@ -136,7 +160,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "sentido_contagem",
 					"strict" : false
 				},
 				{
@@ -144,7 +168,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "sentido_contagem",
+					"name" : "clock_50mhz",
 					"strict" : false
 				}
 			]

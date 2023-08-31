@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ContadorDecimal
-Wed Aug 23 10:54:01 2023
+Wed Aug 30 23:13:42 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,16 +45,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 23 10:54:01 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 30 23:13:42 2023       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; ContadorDecimal                             ;
 ; Top-level Entity Name              ; ContadorDecimal                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 401                                         ;
-;     Total combinational functions  ; 401                                         ;
+; Total logic elements               ; 424                                         ;
+;     Total combinational functions  ; 424                                         ;
 ;     Dedicated logic registers      ; 51                                          ;
 ; Total registers                    ; 51                                          ;
-; Total pins                         ; 47                                          ;
+; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -161,7 +161,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -175,36 +176,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 401       ;
-;                                             ;           ;
-; Total combinational functions               ; 401       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 187       ;
-;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 195       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 250       ;
-;     -- arithmetic mode                      ; 151       ;
-;                                             ;           ;
-; Total registers                             ; 51        ;
-;     -- Dedicated logic registers            ; 51        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 47        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 51        ;
-; Total fan-out                               ; 1380      ;
-; Average fan-out                             ; 2.53      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 424    ;
+;                                             ;        ;
+; Total combinational functions               ; 424    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 202    ;
+;     -- 3 input functions                    ; 36     ;
+;     -- <=2 input functions                  ; 186    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 273    ;
+;     -- arithmetic mode                      ; 151    ;
+;                                             ;        ;
+; Total registers                             ; 51     ;
+;     -- Dedicated logic registers            ; 51     ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 46     ;
+;                                             ;        ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; q[5]~6 ;
+; Maximum fan-out                             ; 50     ;
+; Total fan-out                               ; 1482   ;
+; Average fan-out                             ; 2.61   ;
++---------------------------------------------+--------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,8 +213,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-----------------+--------------+
-; |ContadorDecimal           ; 401 (344)           ; 51 (18)                   ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |ContadorDecimal                 ; ContadorDecimal ; work         ;
-;    |CLOCK1HZ:clkdiv|       ; 57 (57)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ContadorDecimal|CLOCK1HZ:clkdiv ; CLOCK1HZ        ; work         ;
+; |ContadorDecimal           ; 424 (368)           ; 51 (18)                   ; 0           ; 0            ; 0       ; 0         ; 46   ; 0            ; |ContadorDecimal                 ; ContadorDecimal ; work         ;
+;    |CLOCK1HZ:clkdiv|       ; 56 (56)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ContadorDecimal|CLOCK1HZ:clkdiv ; CLOCK1HZ        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -223,7 +224,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; dezena[4..6]                          ; Stuck at GND due to stuck port data_in ;
+; dezena[5,6]                           ; Merged with dezena[4]                  ;
+; dezena[4]                             ; Stuck at GND due to stuck port data_in ;
 ; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -234,8 +236,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 51    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
@@ -249,9 +251,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ContadorDecimal|q[2]       ;
-; 22:1               ; 5 bits    ; 70 LEs        ; 70 LEs               ; 0 LEs                  ; Yes        ; |ContadorDecimal|unidade[5] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ContadorDecimal|q[1]       ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |ContadorDecimal|unidade[0] ;
+; 23:1               ; 5 bits    ; 75 LEs        ; 70 LEs               ; 5 LEs                  ; Yes        ; |ContadorDecimal|unidade[5] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ContadorDecimal|q[0]       ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 28 LEs               ; 2 LEs                  ; Yes        ; |ContadorDecimal|unidade[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
@@ -260,23 +262,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 47                          ;
+; boundary_port         ; 46                          ;
 ; cycloneiii_ff         ; 51                          ;
-;     CLR               ; 15                          ;
-;     CLR SLD           ; 3                           ;
+;     CLR               ; 14                          ;
+;     CLR SCLR SLD      ; 2                           ;
+;     CLR SLD           ; 2                           ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 404                         ;
+; cycloneiii_lcell_comb ; 429                         ;
 ;     arith             ; 151                         ;
 ;         2 data inputs ; 151                         ;
-;     normal            ; 253                         ;
+;     normal            ; 278                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 187                         ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 36                          ;
+;         4 data inputs ; 202                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 6.67                        ;
+; Max LUT depth         ; 13.00                       ;
+; Average LUT depth     ; 6.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -285,7 +288,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -295,54 +298,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Aug 23 10:53:21 2023
+    Info: Processing started: Wed Aug 30 23:13:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ContadorDecimal -c ContadorDecimal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file contadordecimal.vhd
-    Info (12022): Found design unit 1: ContadorDecimal-A File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 22
+    Info (12022): Found design unit 1: ContadorDecimal-A File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 27
     Info (12023): Found entity 1: ContadorDecimal File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file clock1hz.vhd
     Info (12022): Found design unit 1: CLOCK1HZ-Behavioral File: C:/intelFPGA_lite/20.1/ContadorDecimal/CLOCK1HZ.vhd Line: 11
     Info (12023): Found entity 1: CLOCK1HZ File: C:/intelFPGA_lite/20.1/ContadorDecimal/CLOCK1HZ.vhd Line: 5
 Info (12127): Elaborating entity "ContadorDecimal" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ContadorDecimal.vhd(17): used implicit default value for signal "s_bcd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at ContadorDecimal.vhd(70): signal "sentido_contagem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-Warning (10492): VHDL Process Statement warning at ContadorDecimal.vhd(75): signal "sentido_contagem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 75
-Info (12128): Elaborating entity "CLOCK1HZ" for hierarchy "CLOCK1HZ:clkdiv" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at ContadorDecimal.vhd(80): signal "sentido_contagem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at ContadorDecimal.vhd(85): signal "sentido_contagem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at ContadorDecimal.vhd(91): signal "clock_1hz" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 91
+Info (12128): Elaborating entity "CLOCK1HZ" for hierarchy "CLOCK1HZ:clkdiv" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 77
 Warning (10492): VHDL Process Statement warning at CLOCK1HZ.vhd(28): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/20.1/ContadorDecimal/CLOCK1HZ.vhd Line: 28
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "q[0]" is converted into an equivalent circuit using register "q[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "q[1]" is converted into an equivalent circuit using register "q[1]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "q[5]" is converted into an equivalent circuit using register "q[5]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "q[6]" is converted into an equivalent circuit using register "q[6]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "unidade[0]" is converted into an equivalent circuit using register "unidade[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "unidade[3]" is converted into an equivalent circuit using register "unidade[3]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "dezena[0]" is converted into an equivalent circuit using register "dezena[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
-    Warning (13310): Register "dezena[3]" is converted into an equivalent circuit using register "dezena[3]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 70
+    Warning (13310): Register "q[0]" is converted into an equivalent circuit using register "q[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "q[1]" is converted into an equivalent circuit using register "q[1]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "q[5]" is converted into an equivalent circuit using register "q[5]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "q[6]" is converted into an equivalent circuit using register "q[6]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "unidade[0]" is converted into an equivalent circuit using register "unidade[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "unidade[3]" is converted into an equivalent circuit using register "unidade[3]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "dezena[0]" is converted into an equivalent circuit using register "dezena[0]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
+    Warning (13310): Register "dezena[3]" is converted into an equivalent circuit using register "dezena[3]~_emulated" and latch "q[0]~1" File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 80
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "s_dezena[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 14
-    Warning (13410): Pin "s_dezena[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 14
-    Warning (13410): Pin "s_dezena[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 14
-    Warning (13410): Pin "s_bcd[0]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[1]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[2]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[3]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
-    Warning (13410): Pin "s_bcd[7]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 17
+    Warning (13410): Pin "s_dezena[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 16
+    Warning (13410): Pin "s_dezena[5]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 16
+    Warning (13410): Pin "s_dezena[6]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 16
+    Warning (13410): Pin "s_bcd7s_infos[4]" is stuck at GND File: C:/intelFPGA_lite/20.1/ContadorDecimal/ContadorDecimal.vhd Line: 21
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 470 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 401 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Wed Aug 23 10:54:01 2023
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:01:29
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 424 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Wed Aug 30 23:13:42 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:32
 
 

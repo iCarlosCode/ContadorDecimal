@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/20.1/ContadorDecimal/simulation/qsim
 Econtadordecimal
-Z1 w1692798989
+Z1 w1693442898
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 76OUjOFMM1Jzd<9936DA;3
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 dANj__M<MaN@;H9Tkm=iP1
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -19,19 +19,19 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 102
+!i122 216
 R0
 Z10 8ContadorDecimal.vho
 Z11 FContadorDecimal.vho
 l0
 L80 1
-VRk5A_3?AJC_GKXP^Y29Dk0
-!s100 T9;eY=?[0_;n=fm=W0K9G1
+V21EgzRzi[ITo9`D3zM0cW3
+!s100 GIiULRN>8W5W1AlB102351
 Z12 OV;C;2020.1;71
 32
-Z13 !s110 1692798993
+Z13 !s110 1693442899
 !i10b 1
-Z14 !s108 1692798993.000000
+Z14 !s108 1693442899.000000
 Z15 !s90 -work|work|ContadorDecimal.vho|
 Z16 !s107 ContadorDecimal.vho|
 !i113 1
@@ -46,12 +46,12 @@ R6
 R7
 R8
 R9
-DEx4 work 15 contadordecimal 0 22 Rk5A_3?AJC_GKXP^Y29Dk0
-!i122 102
-l793
-L145 8944
-VJ[`Q:1khXdD2PFGTWOc9F2
-!s100 ;oL?B]`Qg41m^fOmKFiIf2
+DEx4 work 15 contadordecimal 0 22 21EgzRzi[ITo9`D3zM0cW3
+!i122 216
+l819
+L144 9384
+Vc>7l83Pm1fX[3Q<6^;gCZ1
+!s100 zNZVel]2OdJEBXa_Y]bBl0
 R12
 32
 R13
@@ -63,10 +63,10 @@ R16
 R17
 R18
 Econtadordecimal_vhd_vec_tst
-Z19 w1692798985
+Z19 w1693442897
 R7
 R8
-!i122 103
+!i122 217
 R0
 Z20 8Waveform4.vwf.vht
 Z21 FWaveform4.vwf.vht
@@ -76,30 +76,30 @@ V8KoCVDfYmiF@jIzJ<9JUH2
 !s100 H5d76<SSD40iP[;`jQLOl3
 R12
 32
-Z22 !s110 1692798994
+R13
 !i10b 1
-Z23 !s108 1692798994.000000
-Z24 !s90 -work|work|Waveform4.vwf.vht|
-Z25 !s107 Waveform4.vwf.vht|
+R14
+Z22 !s90 -work|work|Waveform4.vwf.vht|
+Z23 !s107 Waveform4.vwf.vht|
 !i113 1
 R17
 R18
 Acontadordecimal_arch
 R7
 R8
-Z26 DEx4 work 27 contadordecimal_vhd_vec_tst 0 22 8KoCVDfYmiF@jIzJ<9JUH2
-!i122 103
+Z24 DEx4 work 27 contadordecimal_vhd_vec_tst 0 22 8KoCVDfYmiF@jIzJ<9JUH2
+!i122 217
 l61
-Z27 L34 62
-Z28 VhHoRLgKM`l]@GJa2`nA@D0
-Z29 !s100 UUidBi;VJUiobL33W@gLN2
+L34 73
+VYdk=nR;E`aBDBeSRSU_?f0
+!s100 <AVNWX6zhHFiiQE]X74`o3
 R12
 32
-R22
+R13
 !i10b 1
+R14
+R22
 R23
-R24
-R25
 !i113 1
 R17
 R18
@@ -111,7 +111,7 @@ R6
 R7
 R8
 R3
-!i122 102
+!i122 216
 R0
 R10
 R11
@@ -137,7 +137,7 @@ R7
 R8
 R3
 DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
-!i122 102
+!i122 216
 l65
 L51 20
 Via>5o7W??azG@W@@eFOTF0
